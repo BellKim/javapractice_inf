@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_044_function</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		
+		/* 	function outer() {
+				var num = 10;
+				function inner(){
+					document.write(num);
+					
+				}
+				inner();
+				
+			}
+			outer(); */
+			
+			/*closer 클로저 함수는 외부함수가 종료되더라도 내부함수를 통해서 외부에서 외부함수의 자원을 참조할 수 있는 함수이다. */
+			
+			function outer(){
+				var sum=50;
+				return function(){
+					
+					return sum;
+				}
+				
+			}
+			var result = outer();
+			 /* result = function(){
+			  	 return sum;
+			    } */
+			    document.write(result);
+			    document.write("<hr/>");
+			    document.write(result());
+		
+		</script>
+	
+	</body>
+</html>

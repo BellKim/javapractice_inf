@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_038_history2222</title>
+</head>
+<body>
+	<a href="script_038_history3333.html"> history3 이동 </a>
+	<br/>
+	<button onclick="history.back();"> 이전 페이지로 이동  </button>
+	<p> history2 페이지 </p>
+	
+	<button onclick = "history.forward();"> 다음 페이지로 이동 </button>
+	<!-- 1에서 2로 이동하고 바로 다음페이지 이동이 불가능. (히스토리가 없기때문 ) -->
+	
+</body>
+</html>

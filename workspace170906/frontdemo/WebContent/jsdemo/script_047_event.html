@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_047_evenet</title>
+		<script type="text/javascript">
+			window.onload = function() {
+				//var btn = document.getElementById("btn");
+				//한 객체에 같은 이벤트를 여러개 등록할 수 없다.
+				function func1(){
+					alert('text111');
+				}
+				function func2(){
+					alert('text2222');
+				}//이벤트 중복명시할시에 마지막 이벤트가 실행된다. 
+				//마지막으로 등록된 이벤트만 실행된다.
+				var button=document.getElementById("btn");
+				//사파리, 크롬, IE9이상의 브라우저에서 제공
+				if(window.addEventListener){
+					btn.addEventListener('click', func1, false);
+					btn.addEventListener('click', func2, false);
+					
+				}else{
+					//IE8이하의 브라우저에서 제공
+					btn.attachEvent('onclick', func1);
+					btn.attachEvent('onclick', func2);
+					
+				}
+				
+				
+			};
+		</script>
+	</head>
+	<body>
+		<button id = "btn">123123</button>
+	
+	</body>
+</html>

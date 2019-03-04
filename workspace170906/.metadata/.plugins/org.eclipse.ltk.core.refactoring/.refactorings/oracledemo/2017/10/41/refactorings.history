@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;oracledemo/javademo.sql&apos; to &apos;막테스트.sql&apos;" description="Rename resource &apos;javademo.sql&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="javademo.sql" name="막테스트.sql" stamp="1507571877339" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;oracledemo/막테스트.sql&apos; to &apos;testsql_page.sql&apos;" description="Rename resource &apos;막테스트.sql&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="막테스트.sql" name="testsql_page.sql" stamp="1507617769327" updateReferences="true"/>
+</session>

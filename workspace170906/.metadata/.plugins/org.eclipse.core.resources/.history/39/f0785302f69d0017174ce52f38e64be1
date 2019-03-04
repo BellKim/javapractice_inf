@@ -1,0 +1,25 @@
+package java0920_network;
+
+import java.net.Socket;
+
+public class java231_ChatHandler implements Runnable{
+	//얘 자체가 스레드로 돌도록 해야한다.
+	
+	Socket socket;
+	public java231_ChatHandler() {
+	
+	}//end java231_ChatHandler()
+	
+	public java231_ChatHandler(Socket socket) {
+		this.socket=socket;
+		
+		
+	}//end java231_ChatHandler()
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}//end run()///////////////////////////////////////////////
+
+}

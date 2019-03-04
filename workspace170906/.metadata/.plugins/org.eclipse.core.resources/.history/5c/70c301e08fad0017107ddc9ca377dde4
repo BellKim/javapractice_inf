@@ -1,0 +1,31 @@
+package java1010_jdbc_gui;
+//회원정보관리.
+
+import javax.swing.JFrame;
+import java.awt.*;
+
+public class PersonInfo extends JFrame {
+	PersonMain main;
+	
+	public PersonInfo() {
+		this.setTitle(" 개인정보관리 ");//최상단타이틀.
+		main=new PersonMain();
+		
+		
+		
+		
+		
+		this.setSize(520, 550);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}//end personinfo() ///////////////////////////////////
+
+	public static void main(String[] args) {
+		new PersonInfo();
+		
+
+	}
+
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Iscript_015_array</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+ 			var fruits = ["banana","Orange","Apple","Mango",];
+ 			
+ 			//array->String
+ 			//String
+ 			document.write(typeof fruits.toString() + "<br/>");
+ 			//document.write(typeof String(fruits) + "<br/>");
+ 			document.write(fruits.toString() + "<br/>"); //fruits 에 저장된 문자열이 다 나온다.
+ 			//banana,Orange,Apple,Mango
+ 			document.write(String(fruits) + "<br/>");	//이것도 똑같은 형태로 출력 .
+ 			//banana,Orange,Apple,Mango
+ 			document.write("<hr/>");
+ 			
+ 			document.write(fruits.join()+"<br/>");
+ 			//string
+ 			document.write(typeof fruits.join()+"<br/>");
+ 			
+ 			document.write(fruits.join(" * ")+"<br/>");
+ 			//string
+ 			document.write(typeof fruits.join(" * ")+"<br/>");
+ 			
+ 			document.write("<hr/>");
+ 			
+ 			fruits[4] = "Kiwi";
+ 			document.write(fruits.toString()+ "<br/>");
+ 			
+ 			document.write(fruits.push("melon")+ "<br/>");//6
+ 			document.write(fruits+"<br/>"); //banana,Orange,Apple,Mango,Kiwi,melon
+ 			
+ 			document.write(fruits.pop() + "<br/>");//melon //"제일 마지막 어레이값을 " 메모리에서 꺼내옴. 메모리에서 제거.
+ 			document.write(fruits+"<br/>"); 
+ 			document.write("<hr/>");
+ 			
+ 			var fruits2 = ["banana", "Orange", "Apple", "Mango"];
+ 			//"orange" , "mango"
+ 			document.write(fruits2.slice(1,3) + "<br/>");
+ 			
+ 			//2인덱스로부터 1개를 삭제하고 "Lemon", "Kiwi" 데이터를 추가한다. 
+ 			fruits2.splice(2,1, "Lemon", "Kiwi");
+ 			document.write(fruits2+ "<br/>");
+ 			
+ 			
+ 			var myGirls = ["Cecilie", "Lone"];
+ 			var myBoys = ["Emil", "Tobias", "Linus"];
+ 			document.write(myGirls.concat(myBoys) + "<br/>"); //두개의 배열을 합침.
+ 			
+ 			//Kiwi,Lemon,Mango,Orange,banana
+ 			document.write(fruits2.sort() + "<br/>");
+ 			document.write(fruits2 + "<br/>");
+ 			
+ 			//banana,Orange,Mango,Lemon,Kiwi
+ 			document.write(fruits2.sort().reverse() + "<br/>");
+ 			document.write(fruits2 + "<br/>");
+ 			
+ 			var point = [40, 100, 1, 5, 10];
+ 			
+ 			//40, 100, 1, 5, 10
+ 			document.write(point + "<br/>");
+ 			
+ 			//1, 10, 100, 40, 5 정렬.
+ 			document.write(point.sort() + "<br/>");
+ 			
+ 			//1,5,10,40,100
+ 			document.write(point.sort( function(a,b) { //오름차순
+ 				return a - b
+ 			})+ "<br/>"); 
+ 			
+ 			//100,40,10,5,1
+ 			document.write(point.sort( function(a,b) { //내림차순
+ 				return b-a
+ 			})+ "<br/>"); 
+ 			
+ 			document.write("<hr/>");
+ 			
+ 			
+ 			
+ 			var data = new Array(2, 2, 3);
+ 			function getSum(total, num){ //누적의 값을 받아오기위한 변수 , 배열의 요소를 받아올변수
+ 				return total + num;
+ 			}
+ 			document.write(data.reduce(getSum) + "<br/>"); //7
+ 			document.write("<hr/>");
+ 			
+ 			var numbers = [4, 9, 16, 25];
+ 			//2, 3, 4, 5
+ 			document.write(numbers.map(Math.sqrt)+ "<br/>"); //7
+ 			//map은 개별 적으로 반복처리시켜줌.
+ 			
+ 			
+ 			function myFunction(num){
+ 				return num*num;
+ 			}
+ 			//16,81,256,625
+ 			document.write(numbers.map(myFunction));
+ 			document.write("<br/><hr/>");
+ 			
+ 			
+ 			//push와 pop과는 반대개념. 
+ 			
+ 			var fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+ 			fruits3.unshift("Lemon");
+ 			//Lemon,Banana,Orange,Apple,Mango
+ 			document.write(fruits3 + "<br/>");
+ 			
+ 			//Lemon
+ 			document.write(fruits3.shift()+"<br/>");
+ 			document.write("<hr/>");
+ 			
+ 			
+ 			
+ 			var fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+ 			document.write(fruits4 + "<br/>");
+ 			//2인덱스의 0번째 인덱스부터 오소를 복사함.
+ 			//Banana,Orange,Banana,Orange
+ 			//fruits4.copyWithin(2,0);
+ 			//document.write(fruits4+"<br/>");
+ 			
+ 			//fruits4.copyWithin(2,1);
+ 			//document.write(fruits4+"<br/>");
+ 			
+ 			//Banana,Orange,Mango,Mango
+ 			fruits4.copyWithin(2,3);
+ 			document.write(fruits4+"<br/>");
+ 			//배열의 갯수가 넘어가면 출력이 안된다. 왜냐하면 여기서의 선언된 배열의 갯수는 4개이기 때문.
+ 			
+ 			var number2 = [4, 9, 16, 25];
+ 			function myGet(item, index){
+ 				document.write("["+index+"]" + item + "<br/>");
+ 			}
+ 			/* 
+ 			[0]4
+ 			[1]9
+ 			[2]16
+ 			[3]25 */
+ 			number2.forEach(myGet);
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			/*
+ 			document.write("<br/>");
+ 			*/
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+ 			
+			
+		</script>
+	
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_050_research</title>
+	</head>
+	<body>
+		<div>클라이언트 프로그램이 아닌 것은? </div>
+		<form action="">
+		  <input type="radio" name="gender" value="male"> Male<br>
+		  <input type="radio" name="gender" value="female"> Female<br>
+		  <input type="radio" name="gender" value="other"> Other
+		  <input type="radio" name="gender" value="other"> Other
+	</form>
+		
+	
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_049_imgbutton</title>
+		<style type="text/css">
+		
+		</style>
+		<script type="text/javascript">
+		window.onload=function(){
+			var sign = document.getElementsByTagName('input')[2];
+		sign.onclick=function(){
+				var id = document.getElementById('fid').value;
+				var pass=document.getElementById('fpass').value;
+				alert(id+" , "+pass);
+				return false;
+			} //end onclick function 
+		}
+		
+		</script>
+	</head>
+	<body>
+		<form name="frm" action="script_049_process.jsp">
+			<input type="text" id="fid" name="fid" placeholder="아이디" /> <input
+				type="password" id="fpass" name="fpass" placeholder="비밀번호" /> <input
+				type="image" src="images/signin.gif" alt="로그인" />
+				
+				 <!-- <input type="button" value="로그인" alt="로그인" /> -->
+		</form>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('*').css({'margin':'0','padding':'0','border-size':'0'});	//jquery('*').css(); 로도 가능.
+				$('div').css({'background-color':'green','width':'200px','height':'200px'});
+				$('#line').css({'color':'blue'});
+				
+				$('#line').css({'border':'1px solid black'});
+				$('a[href]').css({'color':'red'});//a에 href 속성이있으면 css적용해라.
+				
+					
+				/*	jquery 셀렉터에 관해서 보고 jquery selectors Reference 가서 보자 .
+				https://www.w3schools.com/jquery/jquery_selectors.asp*/
+				
+			});
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<p id="line">line</p>
+		<p class="common">common</p>
+		<a href="#">korea</a>
+	
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_047_evenet</title>
+		<style type="text/css">
+			div{
+				border:1px solid black;
+			}
+			#red{
+				width:300px;
+				height: 300px;
+				background-color: red;
+			}
+			#green{
+				width:200px;
+				height: 200px;
+				background-color: green;
+			}
+			#blue{
+				width:100px;
+				height: 100px;
+				background-color: blue;
+			}
+		</style>
+		
+		
+		
+		<script type="text/javascript">
+			window.onload = function() {
+				function func1(event){
+					alert('red');
+					/*   red.addEventListener('click', func1, true); 를 해주고 (true)
+						이벤트의 전파를 막으려면
+					*/
+					event.stopPropagation();
+				}
+				function func2(event){
+					alert('green');
+					event.stopPropagation();
+				}
+				function func3(event){
+					alert('blue');
+					event.stopPropagation();
+				}
+				
+				var red = document.getElementById('red');
+				var green = document.getElementById('green');
+				var blue = document.getElementById('blue');
+				
+				red.addEventListener('click', func1, false);
+				green.addEventListener('click', func2, false);
+				blue.addEventListener('click', func3, false); 
+				/*false 일떄
+					파랑클ㄹ릭 -> 블루,그린,레드 출력  
+				 * 그린클릭 -> 그린 레드
+				 * 레드클릭 -> 레드
+				 
+				 true 일떄 파랑클릭 -> 레드 그린 블루 출력
+				 그린 -> 레드 그린
+				 레드 -> 레드
+				 
+				 상단에 func1에 
+				 event.stopPropagation 을 작성해주면 
+				 이벤트가 전파안됨. 
+				 */
+				 
+				 
+/* 				red.onclick=func1;
+				green.onclick=func2;
+				blue.onclick=func3; */
+				
+				
+ 				/*	이벤트가 전달되는 방향에 따라서 캡처링, 버블링을 구별이 되는데  버블링과 캡쳐링
+ 					1. 캡처링 : 부모요소 -> target(자신객체) : true
+ 					2. 버블링 ; target(자신객체) -> 부모요소 : false
+ 				*/
+ 				
+				
+			};
+		</script>
+	</head>
+	<body>
+	
+		<div id="red">
+			<div id="green">
+				<div id="blue"> 
+					&nbsp; 
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

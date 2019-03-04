@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_047_evenet</title>
+		<style type="text/css">
+			div{
+				border:1px solid black;
+			}
+			#red{
+				width:300px;
+				height: 300px;
+				background-color: red;
+			}
+			#green{
+				width:200px;
+				height: 200px;
+				background-color: green;
+			}
+			#blue{
+				width:100px;
+				height: 100px;
+				background-color: blue;
+			}
+		</style>
+		
+		
+		
+		<script type="text/javascript">
+			window.onload = function() {
+				function func1(event){
+					alert('red');
+				}
+				function func2(event){
+					alert('green');
+				}
+				function func3(event){
+					alert('blue');
+				}
+				
+				var red = document.getElementById('red');
+				var green = document.getElementById('green');
+				var blue = document.getElementById('blue');
+				red.addEventListener('click', func1, false);
+				green.addEventListener('click', func2, false);
+				blue.addEventListener('click', func3, false);
+
+			};
+		</script>
+	</head>
+	<body>
+	
+		<div id="red">
+			<div id="green">
+				<div id="blue"> 
+					&nbsp; 
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

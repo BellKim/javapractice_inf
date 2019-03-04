@@ -1,0 +1,74 @@
+package java1010_jdbc_gui;
+//회원정보관리.
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class PersonInfo extends JFrame implements ActionListener{
+	PersonMain main;
+	PersonToolbar tool;
+	PersonMenu menu;
+	
+	public PersonInfo() {
+		this.setTitle(" 개인정보관리 ");//최상단타이틀.
+		
+		menu = new PersonMenu();
+		setJMenuBar(menu);
+		
+		main=new PersonMain();//객체생성후
+		tool=new PersonToolbar();
+		
+		add(BorderLayout.CENTER, main);//센터에 연결함. 
+		add(BorderLayout.NORTH,tool);//다음엔 툴바를 붙힘. 
+		
+		main.registerB.addActionListener(this);
+		main.modifyB.addActionListener(this);
+		main.deleteB.addActionListener(this);
+		main.clearB.addActionListener(this);
+		
+		
+		
+		
+		
+		
+		
+		this.setSize(520, 550);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}//end personinfo() ///////////////////////////////////
+
+	public static void main(String[] args) {
+		new PersonInfo();
+		
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {//implements ActionListener 추가해주면 personinfo 에 나타난다.
+		Object obj = e.getSource();
+		if(obj==main.registerB)
+			setRegister();//[등록]
+
+		
+	}//end actionPerformed()
+
+	private void setRegister() {
+		String name = main.nameF.getText().trim();//trim 공백제거
+		String sex = main.manR.isSelected()?"남":"여"; //메소드명이 is와 had면 결과값이 논리값이다.
+//		String tel1= main.telC.getSelectedItem().toString();
+		String tel1= (String)main.telC.getSelectedItem();
+		String tel2=main.tel1F.getText().trim();
+		String tel3=main.tel2F.getText().trim();
+		String email=main.emailF.getText().trim();
+		
+		
+
+		
+	}//end setRegister() ?////////////////////////////
+}//end class 

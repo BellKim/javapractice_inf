@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css_026_imagehorianetalMenu</title>
+		<style type="text/css">
+			*{
+				margin:0px;
+				padding:0px;
+				border-width: 0px;
+			}
+			ul#gnb{
+			/*가로 마진값을 auto로 설정하면 부모의 큭를 그대로 상속받아
+			width크기만큼 남은 여분을 2분의 1로 왼쪽 오른쪽에 배분을 한다. */
+				margin:auto;
+				width: 816px;
+				height: 38px;
+				list-style-type: none;
+				background-color: yellow;
+			}
+			ul#gnb li{
+				float:left;
+			}
+			ul#gnb li a{
+				width: 136px;
+				height: 38px;
+				display: block;
+				background-image: url('images/globalnavbg.gif');
+				font-size: 0px;
+				text-indent: -2000px;
+				background-repeat: no-repeat;
+			}
+			
+			ul#gnb li.apple a{
+				background-position: 0px 0px;
+			}
+			ul#gnb li.store a{
+				background-position: -136px 0px;
+			}
+			ul#gnb li.mac a{
+				background-position: -272px 0px;
+			}
+			ul#gnb li.ipad a{
+				background-position: -408px 0px;
+			}
+			ul#gnb li.download a{
+				background-position: -544px 0px;
+			}
+			ul#gnb li.support a{
+				background-position: -680px 0px;
+			}
+			
+			
+			ul#gnb li.apple a:hover{
+				background-position: 0px 0px;
+			}
+			ul#gnb li.store a:hover{
+				background-position: -136px -114px;
+			}
+			ul#gnb li.mac a:hover{
+				background-position: -272px -114px;
+			}
+			ul#gnb li.ipad a:hover{
+				background-position: -408px -114px;
+			}
+			ul#gnb li.download a:hover{
+				background-position: -544px -114px;
+			}
+			ul#gnb li.support a:hover{
+				background-position: -680px -114px;
+			}
+			
+			
+		
+		</style>
+	</head>
+	<body>
+		<ul id="gnb">
+			<li class="apple"><a href="#">apple</a></li>
+			<li class="store"><a href="#">store</a></li>
+			<li class="mac"><a href="#">mac</a></li>
+			<li class="ipad"><a href="#">ipad</a></li>
+			<li class="download"><a href="#">download</a></li>
+			<li class="support"><a href="#">support</a></li>
+			
+		
+		</ul>
+	
+	</body>
+</html>

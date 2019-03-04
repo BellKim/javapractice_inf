@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			/*선택자조합*/
+			/*> 은 자식 선택자인다.*/
+			div>span{ /*div 안의 span 요소만 css 적용. */
+			color:yellow;
+			}
+			/*공백은 자손 손택자*/
+			div font{
+				background-color:olive;
+			}
+			/* +은 인접(형체) 선택자이다. */
+			div+p{/*div 바로 다음에p 인 테그만 적용*/
+				color:red;
+			}
+			p[class="one"]{/*p라는 모든 요소에서 클레스속성이 one이라는 곳에 css가 적용.*/
+				border-style: solid;
+				border-width: 1px;
+				border-color:orange;
+				
+			}
+			/*, (쉼표)는 그룹화 선택자이다.*/
+			img, address{
+				border-style: solid;
+				border-width: 3px;
+				border-color: purple;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div>
+			<p>
+				div요소의 <font>자손요소</font>
+			</p>
+			<span>div요소의 자식요소</span>
+		</div>
+	
+		<p>다양한 선택자를 지정하는 방법</p>
+	
+		<p class="one">속성에대한 선택자를 지정할 수 있다.</p>
+		<div>
+			<p>
+				<span>div요소의 자손요소</span>
+			</p>
+		</div>
+	
+		<img src="./images/aa.jpg" width="100" height="100" alt="고수" />
+	
+		<address>서울 종로구 종로2가</address>
+		<div class="one">box</div>
+	
+	</body>
+</html>

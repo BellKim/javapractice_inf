@@ -1,0 +1,21 @@
+package java1010_jdbc_gui;
+
+import javax.swing.JFrame;
+
+public class Personinfo extends JFrame {
+	
+	public Personinfo() {
+		this.setSize(520, 550);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}//end ㅔpersoninfo)(///////////////////////////////////
+
+	public static void main(String[] args) {
+		new PersonInfo();
+		
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package java0920_network;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class java231_chatClient {
+
+	public static void main(String[] args) {
+		try {
+//			Socket socket = new Socket("192.0.0.1", 7777);
+			Socket socket = new Socket("192.168.0.9", 7777);
+			
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+	}//end main
+
+}//end class

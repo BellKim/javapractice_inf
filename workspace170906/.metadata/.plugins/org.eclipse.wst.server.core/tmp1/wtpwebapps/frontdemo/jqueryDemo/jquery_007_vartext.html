@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {//div 에서 text 요소만을 가지고 오도록 하는 방법. 
+		//javascript는 innertext 를 사용해서 했겠지만 jquery에서는?
+		var dnode = $('div').text();//text 리턴
+		var dnode2 = $('div').html();//text 리턴
+		var dnode3 = $('input').val();//text 형태로 리턴함. 
+		//The val() method returns or sets the value attribute of the selected elements.
+		alert(dnode + " " + dnode2 + " " + dnode3);//자식요소와 텍스트 리턴
+		alert("test");
+
+		$('button').click(function() {
+			$('span').text('dom'); //버튼을 누르면  텍스트를 입력해줌.
+			$('input').val('library');
+		});
+
+	});
+</script>
+</head>
+	<body>
+		<button>click</button>
+		<div>
+			<span>java script</span>
+		</div>
+		<input type="text" value="jquery" />
+	
+	
+	</body>
+</html>

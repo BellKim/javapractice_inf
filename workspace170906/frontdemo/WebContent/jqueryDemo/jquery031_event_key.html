@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+		
+		</style>
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		/*
+		 keydown(), keypress()
+		   : 선택한 요소에서 키보드 자판을 눌렀을때 이벤트가 발생한다.
+				차이점은 (굿)keydown()은 모든 자판에 대한 고유 키값을 가져올 수 있으나!
+				(조금 스튜핏)keypress()은 문자(a~z, !, @, #,...등)자판에 대한 고유 키값을 가져올 수 있으나
+				(e.g. ALT, CTRL, SHIFT, ESC)문자, 한글은 가져올수 없다.
+		   keyup() : 선택한 요소에서 키보드에 자판을 눌렀다 떼었을 때  이벤트가 발생한다.
+		 */
+			$(document).ready(function(){//주소창클릭-탭키 혹은 마우스 올려놓으면 배경색상 변경됨. 
+				$('input').on('focus mouseover',function(){
+					$('div').css({'background-color':'yellow'});
+				});
+			
+ 			 	 $('#fname').keydown(function(e){
+ 					//console.log('keydown');
+ 					//키보드 눌릴때마다 콘솔창에 추렭된다. 키보드 모든 버튼이 동작이 된다.
+ 					console.log(e.originalEvent.key);
+ 					console.log(e.key);
+ 					//https://api.jquery.com/event.which/ 
+ 					//참조 
+ 					console.log(e.which + ", " + String.fromCharCode(e.which));
+ 					
+ 				}); 
+				
+				$('#fname').keypress(function(){
+					//console.log('keypress');
+					//키보드 눌릴때마다 콘솔창에 동작이 인식된다. 단, esc와 스페이스 컨트롤 등등은 인식안됨.  
+				}); 
+				
+				$('#fname').keyup(function(){
+					//$('p').text('keyup');
+					//console.log('keyup now');
+				});
+				
+				
+			
+			});
+		</script>
+	</head>
+	<body>
+		<div>
+			<input type="text" name="id" id="fid"/>
+		</div>
+		<button id="btn">keyboard</button>
+		<input type="text" name="id" id="fname"/>
+		<p></p>
+		
+	</body>
+</html>
+
+
+
+
+
+
+
+

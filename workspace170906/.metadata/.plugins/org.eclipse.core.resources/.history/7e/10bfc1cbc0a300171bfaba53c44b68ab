@@ -1,0 +1,102 @@
+오라클에서 제공되는 명령어
+1 DQL(Data Query Language) : 데이터를 검색해서 추출할때 사용된다.(select)
+  
+2 DML(Data Manipulation Language) : 데이터는 추가, 수정, 삭제,병합해주는 명령어들이다.  (insert, update, delete,merge)
+  
+3 DDL(Data Definition Language ) : 테이블의 구조를 정의, 변경해주는 명령어들이다.(create, drop, alter, truncate)
+
+4 DCL(Data Control Language) : 사용자의 권한을 부여,제거해주는 명령어들이다.(grant ,revoke)
+
+5 TCL(Transaction Control Language) : 트랜잭션 설정,취소을 처리해주는 명령어들이다 (commit, rollback, savepoint
+
+--------------------------------
+
+	DROP TABLE emp01;
+	
+	CREATE TABLE emp01
+	AS
+	SELECT first_name, salary
+	FROM employees
+	WHERE 0=1;
+	--테이블 생성. 
+	
+	INSERT INTO EMP01(first_name, salary)
+	VALUES('kim11','5000');
+	
+	
+	INSERT INTO EMP01
+	VALUES('bellkim','5000');
+	
+	INSERT INTO emp01
+	VALUES('Paran', null);
+  
+  
+
+	UPDATE emp01
+	SET salary=8000+8000
+	WHERE first_name='Paran';
+
+
+	DELETE FROM EMP01
+	WHERE first_name='kim11';
+
+ 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	CREATE TABLE student(
+		name varchar2(20), 	--바이트
+		age number(3),		--자릿수
+		avg number(5,2), 	--5는 전체자리수, 2는 소수점자릿수
+		hire date
+	);
+	
+	INSERT INTO student(name, age, avg, hire)
+	VALUES('콩길동',40,99.01,sysdate);
+	
+	ALTER TABLE student
+	ADD loc varchar2(50);
+
+	UPDATE student
+	SET loc='seoul'
+	WHERE name='콩길동';
+	
+	
+	DELETE FROM student
+	WHERE loc = 'seoul';
+	
+	
+	
+	
+
+SELECT * FROM student;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

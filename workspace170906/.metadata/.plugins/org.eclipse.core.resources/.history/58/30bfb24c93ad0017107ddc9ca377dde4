@@ -1,0 +1,55 @@
+package java1010_jdbc_gui;
+//회원정보관리.
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class PersonInfo extends JFrame implements ActionListener{
+	PersonMain main;
+	PersonToolbar tool;
+	PersonMenu menu;
+	
+	public PersonInfo() {
+		this.setTitle(" 개인정보관리 ");//최상단타이틀.
+		
+		menu = new PersonMenu();
+		setJMenuBar(menu);
+		
+		main=new PersonMain();//객체생성후
+		tool=new PersonToolbar();
+		
+		add(BorderLayout.CENTER, main);//센터에 연결함. 
+		add(BorderLayout.NORTH,tool);//다음엔 툴바를 붙힘. 
+		
+		
+		
+		
+		
+		
+		
+		this.setSize(520, 550);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}//end personinfo() ///////////////////////////////////
+
+	public static void main(String[] args) {
+		new PersonInfo();
+		
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {//implements ActionListener 추가해주면 personinfo 에 나타난다.
+		Object obj = e.getSource();
+		JOptionPane.showMessageDialog(this, e.getActionCommand() );
+		//actionlistener 연결할것. 
+		
+	}//end actionPerformed()
+
+}//end class 

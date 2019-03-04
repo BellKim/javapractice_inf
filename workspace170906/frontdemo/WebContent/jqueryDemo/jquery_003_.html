@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			//$('').css({'background-color':'aqua' });
+			//button의 부모요소 접근. javasctipt에서는 parentsnode()사용
+			$('button').parent().css({
+				'width':'200px',
+				'height':'200px',
+				'border':'1px solid black'
+			});
+			//ul요소의 모든 자식요소(리스트1,2,3)
+			$('ul').children().css({
+				'color':'red'
+			});
+			//ul요소의 이전 이웃요소(button 부분)
+			$('ul').prev().css({
+				'background-color':'yellow'
+			});
+			//ul요소의 다음 이웃요소	( <p>line</p> )
+			$('ul').next().css({
+				'background-color':'aqua'
+			});
+			//li요소들 중에서 짝수
+			//인덱스0부터 시작		(even, odd )
+			$('li:even').css({
+				'border':'2px solid black'
+			});
+			
+			//인덱스1부터 시작		(even, odd )
+			$('li:nth-child(even)').css({
+				'border':'2px solid green'
+			});
+			
+			
+		});
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="wrap">
+			<button id="btn"> click</button>
+			<ul>
+				<li> list1 </li>
+				<li> list2 </li>
+				<li> list3 </li>
+			</ul>
+			<p>line</p>
+			
+		</div>
+	
+	</body>
+</html>

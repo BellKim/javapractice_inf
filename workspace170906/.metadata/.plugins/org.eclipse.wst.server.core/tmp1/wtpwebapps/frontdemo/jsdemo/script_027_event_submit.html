@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>submit event</title>
+	</head>
+	<body>
+		<form name="log_f" method="get" ><!-- get 다음에 action=" " 해서 동작을 줘도 된다. -->
+			<fieldset>
+				<legend>회원 로그인</legend>
+				<label for="my_id">아이디</label>
+				<input type="text" name="my_id" id="my_id" />
+				<label for="my_pass">비밀번호</label>
+				<input type="password" name="my_pass" id="my_pass"/>
+				<!-- <input type="submit" value="login" /> -->
+				<input type="button" value="login" id="btn"/>
+			</fieldset>
+		</form>
+	<!-- 하나의폼에 여러개의 서브밋을 사용하면 안되는데 사용해야할경우에는 버튼으로 등록을 시켜서 버튼에서 클릭이벤트가 발생되었을때를 생각해서 작성해야한다.  -->
+		<script type="text/javascript">
+		
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){		//버튼타입으로 이벤트를 실행하도록 하는 부분. <input type="button" value="login" id="btn"/>
+				var idNode=document.getElementById("my_id");
+				var passNode=document.getElementById("my_pass");
+				if(idNode.value==""){
+					alert("아이디를입력하세요");
+					return false;
+				}
+				if(passNode.value == ""){					
+					alert("password 를 지대로 입렿하세요");
+					return false;
+				}
+				
+				
+				document.log_f.action="script_027_event_process.jsp";
+				//함수를 수행하라고 호출하는 과정. (button타입으로 동작하도록)
+				document.log_f.submit(); 
+				
+			};
+		
+		
+		
+		
+		
+		
+			/*도큐면튼에서 . submitevent 발생되면  function을 실행해라.*/
+			document.log_f.onsubmit = function(){	//서브밋 버튼으로 이벤트를 실행시키는부분 <input type="submit" value="login" /> 
+				var idNode=document.getElementById("my_id");
+				var passNode=document.getElementById("my_pass");
+				if(idNode.value==""){
+					alert("아이디를입력하세요");
+					return false;
+				}
+				if(passNode.value == ""){					
+					alert("password 를 지대로 입렿하세요");
+					return false;
+				}
+				
+				document.log_f.action="script_027_event_process.jsp";
+			}
+		
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<!-- 
+		  요소의 속성값 변경 및 불러오는 방법
+		  요소선택.속성명  				:요소로 지정한 속성값을 불러움
+		  요소선택.속성명="값"			:요소로 지정한 속성값을 새값으로 변경
+		  요소선택.getAttribute("속성")	:요소로 지정한 속성값을 불러옴
+		  요소선택.setAttribute("속성","값"):요소로 지정한 속성값을 새값으로 변경  
+		-->
+		<img src = "images/aa.jpg" width="100" height="100"/>
+		<img src = "images/aa.jpg" width="100" height="100"/>
+		
+		<script type="text/javascript">
+			var imgNode=document.getElementsByTagName("img")[0];
+			imgNode.src='images/bag.jpg';
+			//http://localhost:8090/frontdemo/jsdemo/images/bag.jpg		해당 사이트 주소 전체 가져옴. 
+			document.write("<p>"+imgNode.src+"</p>");
+			
+			var imgNode=document.getElementsByTagName("img")[1];
+			imgNode.setAttribute("src", "images/pg.jpg");
+			//images/pg.jpg 			실제 경로만 가져옴. 
+			document.write("<p>"+imgNode.getAttribute("src")+"</p>");
+			
+			
+		</script>
+		
+	
+	</body>
+</html>

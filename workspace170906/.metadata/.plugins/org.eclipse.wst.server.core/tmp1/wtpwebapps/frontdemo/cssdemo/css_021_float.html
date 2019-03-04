@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<style type="text/css">
+			/*float(플로트)
+				1. 플로트는 박스의 위치를 부모요소의 안에서 왼쪽 또는 오른쪽으로 이동시켜주는 기능이다. 
+				2. 플로트가 지정된 박스는 문서의 일반적인 흐름에 영향을 받지 않으면서 이동된 위치에 떠 있다. 
+			*/
+			.wrap{
+				background-color: gray;
+				
+			}
+			div.wrap div{
+				width:100px;
+				height: 100px;
+				
+			}
+			.box1{/*float는 부모를 기준으로 동작함 .(wrap) */
+				background-color: red;
+				float:left;
+			
+			}
+			.box2{
+				background-color: green;
+				float:left;
+			}
+			.box3{
+				background-color: blue;
+				float:left;
+			}
+			
+			.other{
+			clear:left;
+			}
+			.wrap span{
+				float:right;
+			}
+			.other{
+				clear:both;
+			}
+			
+			img{
+				float:left;
+			}
+			.box4{
+				clear:both;
+			}
+		
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			&nbsp;
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<div class="box3"></div>
+			<span>inline</span>
+		</div>
+		
+		<div class="other" style="background-color: yellow; height: 500px;"> 
+			<img src="images/aa.jpg" width="200" height="300" alt="영화배우" />
+			<p>
+				박근혜 출당, 홍준표의 결단(서울=연합뉴스) 안정원 기자 = 자유한국당 홍준표 대표가 3일 오후 서울 여의도 당사에서 한국당 1호 당원인 박근혜 전 대통령 제명을 공식 발표하기 위해 입장하고 있다. jeong@yna.co.kr
+				
+				
+				"'국정농단 박근혜당' 멍에 벗어야" 홍준표 직권결정…첫 강제출당
+				
+				친박 "독단적 결정은 무효" 반발…'국정원 게이트'에 친박결집 미지수
+				
+				보수정당 부분 재편 속도…서청원·최경환 출당은 논의 안 해
+				
+				(서울=연합뉴스) 정윤섭 이슬기 기자 = 자유한국당이 20년 인연의 '정치적 1호 당원'인 박근혜 전 대통령을 강제 출당시켰다.
+				
+				홍준표 대표는 3일 오후 여의도당사에서 기자간담회를 하고 박 전 대통령 '제명'을 공식 발표했다.
+
+				
+				
+			
+			</p>
+			<div class="box4">
+org.omg.DynamicAny	
+Provides classes and interfaces that enable traversal of the data value associated with an any at runtime, and extraction of the primitive constituents of the data value.
+org.omg.DynamicAny.DynAnyFactoryPackage	
+This package contains classes and exceptions from the DynAnyFactory interface of the DynamicAny module specified in the OMG The Common Object Request Broker: Architecture and Specification, http://cgi.omg.org/cgi-bin/doc?formal/99-10-07, section 9.2.2.
+org.omg.DynamicAny.DynAnyPackage	
+This package contains classes and exceptions from the DynAny interface of the DynamicAny module specified in the OMG The Common Object Request Broker: Architecture and Specification, http://cgi.omg.org/cgi-bin/doc?formal/99-10-07, section 9.2.
+org.omg.IOP	
+This package contains the IOP module specified in the OMG document The Common Object Request Broker: Architecture and Specification, http://cgi.omg.org/cgi-bin/doc?formal/99-10-07, section 13.6.
+org.omg.IOP.CodecFactoryPackage	
+This package contains the exceptions specified in the IOP::CodeFactory interface (as part of the Portable Interceptors spec).
+org.omg.IOP.CodecPackage	
+This package is generated from the IOP::Codec IDL interface definition.
+org.omg.Messaging	
+This package contains the Messaging module specified in the OMG CORBA Messaging specification, http://cgi.omg.org/cgi-bin/doc?formal/99-10-07.
+org.omg.PortableInterceptor	
+Provides a mechanism to register ORB hooks through which ORB services can intercept the normal flow of execution of the ORB.
+org.omg.PortableInterceptor.ORBInitInfoPackage	
+This package contains the exceptions and typedefs from the ORBInitInfo local interface of the PortableInterceptor module specified in the OMG Portable Interceptor specification, http://cgi.omg.org/cgi-bin/doc?ptc/2000-08-06, section 21.7.2.
+org.omg.PortableServer	
+Provides classes and interfaces for making the server side of your applications portable across multivendor ORBs.
+org.omg.PortableServer.CurrentPackage	
+Provides method implementations with access to the identity of the object on which the method was invoked.
+org.omg.PortableServer.POAManagerPackage	
+Encapsulates the processing state of the POAs it is associated with.
+org.omg.PortableServer.POAPackage	
+Allows programmers to construct object implementations that are portable between different ORB products.
+org.omg.PortableServer.portable	
+Provides classes and interfaces for making the server side of your applications portable across multivendor ORBs.
+org.omg.PortableServer.ServantLocatorPackage	
+Provides classes and interfaces for locating the servant.
+org.omg.SendingContext	
+Provides support for the marshalling of value types.
+org.omg.stub.java.rmi	
+Contains RMI-IIOP Stubs for the Remote types that occur in the java.rmi package.
+org.w3c.dom	
+Provides the interfaces for the Document Object Model (DOM).
+				
+			</div>
+			
+		</div>
+		
+	
+	</body>
+</html>

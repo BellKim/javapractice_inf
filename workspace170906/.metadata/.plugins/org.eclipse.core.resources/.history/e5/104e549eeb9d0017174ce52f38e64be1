@@ -1,0 +1,85 @@
+package java0920_network;
+
+import java.awt.BorderLayout;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class java231_chatClient {
+	String userName;
+	String host;
+	int port;
+	private JFrame frm;
+	private JPanel pan;
+	private JTextArea taOutput;
+	private JLabel lbName;
+	private JTextField tfInput;
+	private DataInputStream dataIn;
+	private DataOutputStream dataOut;
+	Thread th;
+	
+	public java231_chatClient() {
+		
+	}
+	
+	public java231_chatClient(String host, int port) {
+		System.out.println("사용자 이름을 입력하세요 : ");
+		Scanner sc = null;
+		sc = new Scanner(System.in);
+		userName = sc.nextLine();
+		if(userName.equals(""))
+			userName="guest";
+		
+		this.host=host;
+		this.port=port;
+		initComponent();
+		
+		
+	}//end  java231_chatClient
+	
+	private void initComponent() {
+		frm = new JFrame("채팅프로그램 {"+host+":"+port+"}");
+		taOutput = new JTextArea();
+		taOutput.setEditable(false);//편집 불가능하도록 하기
+		
+		tfInput = new JTextField(10);
+		pan=new JPanel();
+		lbName = new JLabel("입력 : ");
+		
+		
+		JScrollPane scroll = new JScrollPane(taOutput);//스크롤추가
+		
+		frm.add(BorderLayout.CENTER, scroll);
+		frm.add(BorderLayout.SOUTH, pan);
+		
+		pan.setLayout(new BorderLayout()); 
+		pan.add(lbName, BorderLayout.WEST);
+		pan.add(tfInput, BorderLayout.CENTER);
+		
+		frm.setSize(400, 400);
+		frm.setVisible(true);
+		frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				
+	}//end initComponent()///////////////////////////////////////////
+	
+
+	public static void main(String[] args) {
+		java231_chatClient client = new java231_chatClient("127.0.0.1",7777);
+		
+
+
+		
+
+	}//end main
+
+}//end class

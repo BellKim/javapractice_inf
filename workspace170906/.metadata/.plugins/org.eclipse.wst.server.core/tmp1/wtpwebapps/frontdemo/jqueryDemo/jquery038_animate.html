@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery038_animate</title>
+<style type="text/css">
+  div{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    background-color: red   
+    
+  }
+  
+  p{
+    width:100px;
+    height:100px;
+    border:1px solid black;
+    background-color:blue; 
+  }
+</style>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+/*
+ * queue() : 큐에 저장된 함수를 반환하거나 ,큐에 함수를 저장하고 
+                 저장한 이후에 적용된 메서드는 모두제거한다.
+   clearQueue() : clearQueue()이후의 애니메이션만 수행한다.
+   
+   $(요소선택).queue(); 선택한 요소의 큐에 대기 중인 메서드 리턴한다.
+   
+   $(요소선택).queue(function(){}); 선택한 요소의 큐에 함수를
+   			저장한다.  이후 queue()메소드에 저장된 애니메이션은 연결이
+   			끊어진다.
+   $(요소선택).clearQueue(); clearQueue()이후의 애니메이션만 수행한다.
+   
+ */
+ 
+ $(document).ready(function(){
+	 $('div').animate({height:'300px'},'slow')
+		     .animate({width:'300px'},'slow');
+	 
+	 //queue에 콜백함수를 등록한다.
+	 //이후의 queue()에 저장된 애니메이션은 수행하지 않는다. 
+	 //1
+	$('div').queue(function(){});//이 라인을 주석처리하고 다시 실행해보자. 
+	 //2
+	$('div').animate({height:'100px'},'slow').animate({width:'100px'},'slow');
+	//3
+	$('span:nth-of-type(1)').text($('div').queue().length);//5개
+		
+	//1을 주석처리, 2, 3 을 실행 
+	//2를 주석처리, 1, 3 을 실행
+	
+	
+	$('p').animate({height:'300px',marginLeft:'100px'},'slow')
+			.animate({width:'300px'},'slow');
+	
+	$('p').clearQueue();//제일 마지막에 있는 속성값으로 주겠다 하면 이라인을 추가하면된다네?
+	$('p').animate({height:'30px'},'slow')
+			.animate({width:'800px'},'slow');
+	$('span:nth-of-type(2)').text($('div').queue().length);
+	
+	
+	
+
+	 
+ });
+</script>
+</head>
+<body>
+	<span>0</span>
+	<div>&nbsp;</div>
+
+	<span>0</span>
+	<p>&nbsp;</p>
+
+</body>
+</html>

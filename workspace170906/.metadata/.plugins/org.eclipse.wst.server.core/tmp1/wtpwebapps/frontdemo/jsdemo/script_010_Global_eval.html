@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Iscript_010_Global_eval</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//eval(String) : 수식의 결과를 리턴, 문자열을 숫자로 리턴.
+			
+			var data=eval("3+2");
+			//number data =5; 
+			document.write(typeof data + " data = " + data + "<br/>");
+			
+			data = eval("3"+"2");
+			document.write(typeof data + " data = " + data + "<br/>");
+			
+			data = eval("3");
+			document.write(typeof data + " data = " + data + "<br/>");
+			
+			
+			data = eval("3")+eval("2");
+			//number data = 5;
+			document.write(typeof data + " data = " + data + "<br/>");
+			
+			/*
+			data=eval("ab");
+			document.write(typeof data+"<br/>");//오류뜸 (console창 참조. )
+			*/
+			
+			//배열인경우
+			var arr='[1,2,3,4,5]';
+			document.write(typeof arr + " arr = " + arr + "<br/>");
+			
+			//string-> array(object) 
+			data = eval(arr);//비 동기화식 데이터 처리 방식이다. 중요하다아아 
+			document.write(typeof data + " data = " + data + "<br/>");	//object , 1, 2, 3, 4, 5
+			document.write((data instanceof Array)+ "<br/>");	//true 
+			
+			
+			
+			var obj='{"one":"java","two":"jsp"}';
+			document.write(typeof obj + " " + obj + "<br/>");	//string {"one":"java":,"two":"jsp"}
+			
+			data=eval("("+obj+")");//ajax 할때 사용되는곳
+			document.write(typeof data + " " + data + "<br/>"+"");
+			document.write( data.one + " " + data.two + "<br/>");
+			
+			/*
+				object - number, string, boolean, object
+				function
+			*/
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	
+	</body>
+</html>

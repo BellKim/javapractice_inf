@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css_034_search.html</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+				border-width:0;
+			}
+			body{
+				font-family: Arial, Helvetica, sans-serif;
+				padding:30px;
+			}
+			div#header{
+				width: 880px;
+				height: 150px;
+				position: relative;
+				margin-bottom: 10px;
+				background-color: yellow;
+			}
+			fieldset{
+				position:absolute;
+				left: 328px;
+				top: 25px;
+				width: 320px;
+				height: 50px;
+				background: url(images/searchbg.gif) no-repeat left top;
+			}
+			.hidden{
+				font-size: 0;
+				width: 0;
+				height: 0;
+				line-height: 0;
+				overflow: hidden;
+				visibility: hidden;
+			}
+			fieldset .search{
+				display: block;
+				width: 200px;
+				height: 20px;
+				float: left;
+				margin: 14px 20px 0px 5px;
+				border: 0;
+				font-size: 20px;
+			}
+			fieldset .btn{
+				display: block;
+				width: 80px;
+				height: 50px;
+				float: left;
+			} 
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<form method="get" action="">
+				<fieldset>
+					<legend class="hidden"> 검색 </legend>
+					<input name="search" class="search" type="text" title="검색필드" /> 
+					<input 	type="image" src="images/searchbtn.gif" alt="검색버튼" title="검색버튼" />
+				</fieldset>
+			</form>
+		</div>
+	
+	</body>
+</html>

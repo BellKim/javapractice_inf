@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_028_option</title>
+	</head>
+	<body>
+		<form name="frm" method="get" action="#">
+			<p>과일선택</p>
+			<select name="fruit">
+			<!-- value 값은 웬만하면 영어로 하는것이 좋다. 기본적으로 인코딩타입에서 깨질수 있기때문에.. -->
+				<option value="fruit">과일을 선택하세요</option>
+				<option value="apple">사과</option>
+				<option value="kiwi">키위</option>
+				<option value="banana">바나나</option>
+			</select>
+			<input type="submit" value="commit" />
+		</form>
+		<script type="text/javascript">
+			/*	
+				[폼ㄴ 요소에서 select option 요소 선택]
+				1. document.폼요소.입력요소이름.option[index];
+					: <select>에 <option> 을 선택할때 상ㅇ. 
+				2. var i = document.폼이름.입력요소이름.selectIndex;
+					: select 요소에서 선택된 option 요소의 인덱스를 리턴. 
+			*/
+/* 			window.onload=function(){//현재페이지가 온로드되면 이페이지를 로딩해라.
+						var selFruit=document.frm.fruit.options;//옵션의 객체를 받아온다.
+						alert(selFruit[0].value + "\n" +
+								selFruit[1].value + "\n" +
+								selFruit[2].value + "\n" +
+								selFruit[3].value + "\n"); //알랏창에서 br을 해주면 문자로 나온다.그러므로 \n으로 해줘야한다.
+			};   */
+			
+			document.frm.onsubmit=function(){
+								  var optFruit=document.frm.fruit;//<select name="fruit">
+																	/* <!-- value 값은 웬만하면 영어로 하는것이 좋다. 기본적으로 인코딩타입에서 깨질수 있기때문에.. -->
+																	<option value="fruit">과일을 선택하세요</option>
+																	<option value="apple">사과</option>
+																	<option value="kiwi">키위</option>
+																	<option value="banana">바나나</option> 
+																	</select>									*/
+								  alert(optFruit.value);
+								
+															
+								
+									
+				
+								  };
+			
+		</script>
+	</body>
+</html>

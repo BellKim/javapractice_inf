@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;oracledemo/oracle.txt&apos; to &apos;oracle_001oracle.txt&apos;" description="Rename resource &apos;oracle.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="oracle.txt" name="oracle_001oracle.txt" stamp="1505983370256" updateReferences="true"/>
+</session>

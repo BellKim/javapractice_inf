@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_005_statement</title>
+	</head>
+	<body>
+		<!--
+			1. 선택문 : if~else, switch~case
+			2. 반복문 : for, while, do~while, for ~in
+			3. 기  타 : break;
+		 -->
+		 <script type="text/javascript">
+		 	var data=2;
+		 	switch (data) {
+			case 1:
+				document.write(10+"<br/>");
+				break;
+			case 2:
+				document.write(20+"<br/>");
+				break;
+			default:
+				document.write("end");
+				break;
+			}
+		 	
+		 	document.write("<br/>");
+		 	
+		 	data = true;
+		 	switch (data) {
+			case true:
+				document.write("ok");
+				break;
+			case false:
+				document.write("fail");
+				break;
+			default:
+				break;
+			}
+		 	
+		 	document.write("<br/>");
+		 	
+		 	var arr=[10,20,30,40,50];
+		 	for(var index in arr){
+		 		document.write(index+"<br/>"); //인덱스 숫자번호출력
+		 		document.write(arr[index]+"<br/>");//인덱스 값 출력
+		 	}
+		 	
+		 </script>
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

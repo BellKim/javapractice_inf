@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_017_RegExp</title>
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+			var str = "The Best things in best life are best free";
+			//best라는 문자열이 있는 위치를 찾아줌. 
+			//19
+			document.write(str.search(/best/)+"<br/>");
+			
+			//best라는 문자열이 있는 위치를 찾아주면서 대소문자 구분안함.  
+			//4
+			document.write(str.search(/best/i)+"<br/>");
+			
+			var str2 = "The Best things in best life are best free";
+			//best
+			document.write(str2.match(/best/)+"<br/>");
+			//best best
+			document.write(str2.match(/best/g)+"<br/>");
+			//대소문자 구분없이 가져옴. best best best
+			document.write(str2.match(/best/gi)+"<br/>");
+			
+			var patt = /e/;	//
+			//패턴을 정의한다. 
+			//true
+			document.write(patt.test(str2) + "<br/>");
+			
+			patt=/y/i;
+			//false
+			document.write(patt.test(str2) + "<br/>");
+			//test()는 논리값으로 리턴한다. 
+			
+			//일치하는 값이 없으면 null을 리턴한다.
+			document.write(patt.exec(str2) + "<br/>");	//null
+			document.write(/e/.exec(str2) + "<br/>");	//e
+			
+			var ex = new RegExp("e");
+			document.write(ex.test(str2)+ "<br/>");	//true 
+			
+			var ex = new RegExp("F", "i");		// F를 찾, i 대소문자 구분없이. 
+			
+			document.write(ex.test(str2)+ "<br/>");	//true
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		</script>
+		
+		
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

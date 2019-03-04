@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_049_imgbutton</title>
+		<style type="text/css">
+		
+		</style>
+		<script type="text/javascript">
+		
+		</script>
+	</head>
+	<body>
+		<form name="frm" action="#">
+			<input type="text" id="fid" name="fid" placeholder="아이디" /> <input
+				type="password" id="fpass" name="fpass" placeholder="비밀번호" /> <input
+				type="image" src="images/signin.gif" alt="로그인" />
+				
+				 <!-- <input type="button" value="로그인" alt="로그인" /> -->
+		</form>
+	</body>
+</html>

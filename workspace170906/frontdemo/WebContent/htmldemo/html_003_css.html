@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>html css3_css</title>
+		<link href="outer.css" rel="stylesheet" type="text/css"></link>
+		<!-- link의 각자 의미하고 있는 것들을 인지할것.  -->
+		<!-- 인터널 스타일 위에서 외부정의 스타일 을 표현해줌. -->
+		<style type="text/css">/*내부스타일*/
+			/*class 속성의 값이 one 인 요소에 스타일을 적용한다. */
+			.one
+			{
+				background-color:blue;
+				color:white;
+			}/* 인터널스타일 */	
+			
+		</style>
+	</head>
+	<body>
+		<!-- 
+		    css(Cascading Style Sheet) 는 웹페이지의 요소들에 단계적으로 적용할 수 있는 스타일들의 모임이다.
+		    W3c에서 표준을 제정하며 CSS는 웹페이지의 스타일(모양,크기, 색상, 간격등)을 정의하여 웹페이지의 요소를 표현하는데 사용된다.
+		    CSS의 구문형식
+		    selector {property:value; property:value}
+		    selector : 스타일이 적용될 범위를 지정하는 선택자이다. 선택자로 지정할 수 있는 종류는 요소명, id, class, 속성들을 사용할 수 있다.
+		    property : 프로퍼티의 이름을 지정한다.
+		    value : 프로퍼티의 값을 지정한다.
+			스타일은 인라인스타일 , internal스타일, external스타일이 있다.
+		        인라인스타일 > internal스타일> external스타일
+		        
+		        
+	 	-->
+		<p>hello world</p>
+		
+		<div class = "one">inline style 3</div>
+		<div id = "two" style="color:purple">inline style 2</div>
+		<div id = "three">inline style 1 </div>
+		
+	</body>
+</html>

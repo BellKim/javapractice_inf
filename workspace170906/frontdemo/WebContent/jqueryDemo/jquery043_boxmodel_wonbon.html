@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title>jquery043_boxmodel</title>
+	<style type="text/css">
+	body{
+		height:4000px;
+		width: 3000px;
+	}
+	div{
+		width: 300px;
+		height: 200px;
+		border: 1px solid black;
+		position: fixed;
+		
+	}
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).scroll(function(){
+			//scrollTop() 브라우저의 수직스크롤 이동 너비값을 리턴. 
+			//scrollLeft() 브라우저의 수평스크롤 이동 높이값을 리턴.
+			var s=$(window).scrollTop();
+			var w=$(window).scrollLeft();
+			$('div').html("top : "+ s + "<br/>left : " + w);
+		});
+		
+	</script>
+	
+	
+	</head>
+	<body>
+		<div>
+			<div></div>
+		</div>
+	</body>
+</html>

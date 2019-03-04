@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		/*
+			속성 : attribute, property 
+					HTML	   JS
+				HTML에서의 속성 : attribute
+				Javasctipt에서의 속성 : property
+		*/
+			$(document).ready(function(){
+				//jquery_001_cdn.html
+				alert($('a').attr('href'));
+				
+				//http://localhost:8090/frontdemo/jqueryDemo/jquery_001_cdn.html
+				//alert($('a').prop('href'));
+				
+				//undefined
+				//alert($('input').attr('checked'));	//html 정적 페이지에서 가져오는것(html의 요소의 속성으로 작성되어있는것을 가지고온다.)
+				
+				//false              로 가져온다. 
+				//alert($('input').prop('checked'));		//스크립트처럼 동적으로 당시에  변환된 것을 가지고 오는것.
+				//prop 와 attr 을 구별 못한다면 1순위로 prop 을 우선으로 사용한다. 
+				
+				//attr 메소드
+				//https://www.w3schools.com/jquery/html_attr.asp
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn">commit</button>
+		<a href="jquery_001_cdn.html">첫페이짖이이이</a>
+		<input type="checkbox"/>
+		<div>text test</div> 	
+	</body>
+</html>

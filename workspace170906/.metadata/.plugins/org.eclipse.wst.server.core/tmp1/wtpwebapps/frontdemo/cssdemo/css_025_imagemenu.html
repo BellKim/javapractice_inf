@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css_025_imagemenu</title>
+		<style type="text/css">
+			*{
+				margin: 0px; 
+				padding: 0px;
+				border: 0px;
+			}
+			body{
+				margin-left:20px;
+			}
+			h1{
+				width: 0px;
+				height: 0px;
+				visibility: hidden;
+				text-indent: -20000px;
+			}
+			ul.mainMenu{
+				width: 1208px;
+				height: 104px;
+				background-color: yellow;
+				border-left: 2px solid black;
+			}
+			ul.mainMenu li{
+				list-style-type: none;
+				border: 2px solid black;
+				border-left: 0px;
+				float: left;
+				 
+			}
+			ul.mainMenu li a{
+				display: block;
+				width: 300px;
+				height: 100px;
+				font-size: 0px;
+				text-indent: -2000px;
+			}
+			ul.mainMenu li.mail a{
+				background-image: url('images/mail.gif');
+			}
+			ul.mainMenu li.cafe a{
+				background-image: url('images/cafe.gif');
+			}
+			ul.mainMenu li.blog a{
+				background-image: url('images/blog.gif');
+			}
+			ul.mainMenu li.kin a{
+				background-image: url('images/kin.gif');
+			}
+			
+			ul.mainMenu li.mail a:hover{
+				/*background-position: right bottom;*/
+				background-position: -300px 0px;
+				background-repeat: no-repeat;
+				/*position 을 +을헀을때 도 나온다. 하지만 백그라운드 리피트를 "no-repeat" 
+				으로 변경해주면 이미지가 반복이 아니라서 포지션 변경이 안된다. 
+				이미지 리피트는 repeat 가 기본값이다. */
+			}
+			ul.mainMenu li.cafe a:hover{
+				/*background-position: right bottom;*/
+				background-position: -300px 0px;
+			}
+			ul.mainMenu li.blog a:hover{
+				/*background-position: right bottom;*/
+				background-position: -300px 0px;
+			}
+			ul.mainMenu li.kin a:hover{
+				/*background-position: right bottom;*/
+				background-position: -300px 0px;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<h1>메뉴</h1>
+		<ul class="mainMenu">
+			<li class="mail"><a href="#">메일</a> </li>
+			<li class="cafe"><a href="#">카페</a> </li>
+			<li class="blog"><a href="#">블로구</a> </li>
+			<li class="kin"><a href="#">지식인</a> </li>
+		</ul>
+
+	
+	</body>
+</html>

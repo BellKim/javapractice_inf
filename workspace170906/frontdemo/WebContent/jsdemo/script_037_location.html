@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_037_location</title>
+	</head>
+	<body>
+		<!-- 
+				location : 현재 주소 영역에 참조주소(url)정보를 나타낸다.
+				location객체는 로컬 컴퓨터에는 href 속성만 지원하므로
+				웹호스팅(웹서버)에 올리고 테스트를 해야만 정상적으로 실행된다.  
+		-->
+		<script type="text/javascript">
+		/*  http://localhost:8090/frontdemo/jsdemo/script_037_location.html  */
+		
+		document.write("href : " + location.href  +"<br/>");
+		
+		//url의 #에 명시된 값만 리턴. 
+		// #home
+		document.write("hash : " + location.hash +"<br/>");//???? 먼가안나오는디
+		
+		//localhost
+		document.write("hostname : " + location.hostname  +"<br/>");
+		
+		//url에서 도메인과 포트번호 리턴.
+		// localhost:8090
+		document.write("host : " + location.host  +"<br/>");
+		
+		//url에서 프로토콜 리턴. (통신규약을 리턴해라. )
+		// http:
+		document.write("host : " + location.protocol  +"<br/>");
+		
+		//주소뒤에 다음과같이 입력하면
+		//http://localhost:8090/frontdemo/jsdemo/script_037_location.html?pageNum=10
+		// ?pageNum=10 이런 결과가 나온다. 
+		document.write("search : " + location.search  +"<br/>");
+		
+		//새로고침이 일어난다. 
+		//document.write("reload : " + location.reload()  +"<br/>");
+		
+		
+		
+		</script>
+		
+		
+	
+	</body>
+</html>

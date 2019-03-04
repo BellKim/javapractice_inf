@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		/*
+			animate({애니메이션속성}, "효과속도", 콜백함수);
+			애니메이션속성 : 모션으로 적용할 속성을 스타일(css)를 입력한다.
+		*/
+		
+			$(document).ready(function(){
+/* 				$('h1').animate({marginLeft:'250px'},5000,function(){
+					//함수작성필요시작성
+					alert("end");
+				}); */
+				$('h1').animate({marginLeft:'250px'},5000);
+				$('h2').animate({marginLeft:'250px'},5000);
+				
+				$('h3').animate({marginLeft:'250px'},5000)
+					   .animate({marginLeft:'100px'},3000);
+						
+			});
+		</script>
+	</head>
+	<body>
+	
+		<h1>content1</h1>
+		<h1>content2</h1>
+		<h1>content3</h1>
+		
+	</body>
+</html>

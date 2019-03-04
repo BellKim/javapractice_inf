@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css_002_selector</title>
+		<style type="text/css">
+			/*선택자 우선순위 */
+			/*0001*/
+			
+			p{
+				color:red;
+				font-size: 30px;
+			}
+			
+			p{
+				background-color: yellow;
+				color:blue;
+				
+			}
+			
+			.order{
+			
+			}
+			
+			#unit{
+			
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p> test1 </p>
+		<p class="order" id="unit"> test</p>
+		<p> test3</p>
+		<p class="order"> test4 </p>
+		
+	
+	</body>
+</html>

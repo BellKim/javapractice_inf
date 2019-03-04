@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				/* $('input[class=check_all]').bind('click',function(){
+					alert("hello");
+				}); */
+				
+				/* $('input[class=check_all]').val($(this).is(':checked'));
+				
+			    $('input[class=check_all]').change(function() {
+			        if($(this).is(":checked")) {
+			            var returnVal = confirm("Are you sure?");
+			            $(this).attr("checked", returnVal);
+			            
+			            $('input[class=chk]').is(':checked')			            
+			            
+			        }
+			        $('input[class=check_all]').val($(this).is(':checked')); */
+			        
+			        $('.check_all').click(function(){
+			        	$('.chk').prop('checked',$(this).prop('checked')); //prop() 체크의 상태값.
+			        });
+			        
+			        $('button').click(function(){
+			        	$('.chk:cheked').each(function(index, value){
+			        		//$(this).parent().parent().remove();//여기서의 this는?
+			        		$(this).parents('tr').remove();
+			        	});	
+			        });
+			        
+			    
+				
+			
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<button>삭제</button>
+		<div class="wrap">
+			<table>
+				<tr>
+					<th><input type="checkbox"class="check_all"  id="check_all" />전체선택</th>
+					<th>제목</th>
+					<th>작성자</th>
+				</tr>
+	
+				<tr>
+					<td><input type="checkbox" class="chk"></td>
+					<td>title1</td>
+					<td>writer1</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="chk"></td>
+					<td>title2</td>
+					<td>writer2</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="chk"></td>
+					<td>title3</td>
+					<td>writer3</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="chk"></td>
+					<td>title4</td>
+					<td>writer4</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" class="chk"></td>
+					<td>title5</td>
+					<td>writer5</td>
+				</tr>
+			</table>
+		</div>
+	
+	</body>
+</html>

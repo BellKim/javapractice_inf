@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_008_number</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var data = 123;
+			var str = data.toString();
+			var obj = new Number(123);
+			document.write(data + ", ");
+			document.write(str + ", ");
+			document.write(obj + "<br/>");	//3개값 모두 123
+			
+			document.write(typeof data + ", ");
+			document.write(typeof str + ", ");
+			document.write(typeof obj + "<br/>");	//3개값 모두 123
+			
+			var res = data/"korea";
+			var res2 = data/"10";
+			//Nan (not a number)
+			//Nan, 12.3
+			document.write(res + ", "+ res2 + "<br/>"); //
+			document.write((typeof res) + ", "+ (typeof res2) + "<br/>"); //number, number (첫번째 넘버는 단순히 data만을 가지고 판단을하는듯)
+			
+			
+			var a = new Number(100);
+			var b = new Number(100);
+			var c = 100;
+			var d = 100;
+			
+			document.write((a==b) + ", " + (c==d) + "<br/>");//false, true
+			//ValueOf() : 객체에 저장된 값을 리턴한다.
+			//number
+			
+			document.write(typeof a.valueOf() + "<br/>");
+			
+			//true
+			document.write((a.valueOf()==b.valueOf()) + "<br/>");
+			
+			
+			var k=200;
+			//toString() : 숫자를 문자ㅏ열로 변환
+			//string
+			document.write(typeof k.toString() + "<br/>");
+			document.write(typeof true.toString() + "<br/>");
+			
+			document.write( "<br/>");
+			var arr = [10,20,30];
+			document.write(arr.toString() + "<br/>"); //쉼표  (, ) 도 하나의 문자열로 출력이 된다. 
+			document.write(typeof arr.toString() + "<br/>");
+			
+			var obj={"width":10, "height":20};
+			document.write(obj.toString()+ "<br/>");	//string
+			document.write(obj.toString().width+ "<br/>");	//undefined
+			document.write(obj.width+ "<br/>");		//10
+			
+			var m="5";
+			var p="3";
+			
+			//53
+			document.write((m+p) + "<br/>");
+			
+			//number
+			document.write(typeof parseInt(m)+"<br/>");
+			
+			//8
+			document.write((parseInt(m)+parseFloat(p))+"<br/>");
+			
+
+											
+			
+		</script>
+	
+	</body>
+</html>

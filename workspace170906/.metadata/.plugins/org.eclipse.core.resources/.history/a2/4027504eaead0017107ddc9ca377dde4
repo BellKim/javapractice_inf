@@ -1,0 +1,250 @@
+package java1010_jdbc_gui;
+//회원정보관리.
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.StringTokenizer;
+
+public class PersonInfo extends JFrame implements ActionListener, MouseListener {
+	PersonMain main;
+	PersonToolbar tool;
+	PersonMenu menu;
+	int crow = -1;// crow 를 -1로 하지않으면 기본0이다. 인덱스번호가 0부터 시작되는데 0번인덱스가 선택되어있는것으로 인식되므로??? 뭔소리여
+
+	public PersonInfo() {
+		this.setTitle(" 개인정보관리 ");// 최상단타이틀.
+
+		menu = new PersonMenu();
+		setJMenuBar(menu);
+
+		main = new PersonMain();// 객체생성후
+		tool = new PersonToolbar();
+
+		add(BorderLayout.CENTER, main);// 센터에 연결함.
+		add(BorderLayout.NORTH, tool);// 다음엔 툴바를 붙힘.
+
+		main.registerB.addActionListener(this);
+		main.modifyB.addActionListener(this);
+		main.deleteB.addActionListener(this);
+		main.clearB.addActionListener(this);
+
+		main.table.addMouseListener(this);
+
+		this.setSize(520, 550);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	}// end personinfo() ///////////////////////////////////
+
+	public static void main(String[] args) {
+		new PersonInfo();
+	}// end main
+
+	@Override
+	public void actionPerformed(ActionEvent e) {// implements ActionListener 추가해주면 personinfo 에 나타난다.
+		Object obj = e.getSource();
+		if (obj == main.registerB)
+			setRegister();// [등록]
+
+		else if (obj == main.modifyB)
+			setModify(); // [수정]
+		else if(obj == main.deleteB)
+			delete();	//	[삭제]
+
+	}// end actionPerformed()
+
+	
+	private void delete() {
+//		현재 데이터에서 선택되어있는 셀을 선택.
+		int row = main.table.getSelectedRow();
+		main.tableModel.removeRow(row);//삭제할 행의 번호를 row 에 넣어라. 그 row 는 삭제된다. 
+		if(main.table.getValueAt(row, 0)==null) {//비어있는것을 선ㅌ택했을때
+			setMessage("데이터가 입력된 레코드를 선택하시죠?");
+			return;
+		}
+		
+		//삭제하기전에 물어보고 삭제를 한다.
+		//0 : yes		 1 : no
+		if(getConfirmMessage("정말로 삭제하시것슴까???")==1)		 
+			
+		
+		main.tableModel.removeRow(row);
+		
+		if(main.table.getRowCount()<50)
+			main.tableModel.setNumRows(50);
+		
+	}//end delete()//////////////////////////////////////////////////////////
+	
+	public int getConfirmMessage(String msg) {
+		return JOptionPane.showConfirmDialog(this, msg," ", JOptionPane.YES_NO_CANCEL_OPTION);
+		
+	}//end getConfirmMessage()////////////////////////////////////////////////
+		
+
+	public void setMessage(String msg) {
+		JLabel label = new JLabel(msg);
+		label.setFont(new Font("sanSerif", 0, 13));
+		label.setForeground(Color.blue);
+		JOptionPane.showMessageDialog(this, label);
+
+	}// end set Message();;;;//////////////////
+
+	private void setModify() { // 수정부분이 등록부분 어디와 유사한지 관찰하기.
+		String name = main.nameF.getText().trim();// trim 공백제거
+		String sex = main.manR.isSelected() ? "남" : "여"; // 메소드명이 is와 had면 결과값이 논리값이다.
+		// String tel1= main.telC.getSelectedItem().toString();//두가지 방법이다.
+		String tel1 = (String) main.telC.getSelectedItem();
+		String tel2 = main.tel1F.getText().trim();
+		String tel3 = main.tel2F.getText().trim();
+		String email = main.emailF.getText().trim();
+		
+		
+		// 모든 항목을 입력하지 않았을때 경고.
+		if (name.length() < 1 || tel2.length() < 1 || tel3.length() < 1 || email.length() < 1) {
+			setMessage("모든 항목을 입력하십시요");
+			return;
+		}
+
+
+
+		// 테이블에서 선택한 레코드(행)에 갱신함 -> crow가 값을 가지고 있음.
+
+		main.table.setValueAt(name, crow, 1);
+		main.table.setValueAt(sex, crow, 2);
+		main.table.setValueAt(tel1 + "-" + tel2 + "-" + tel3, crow, 3);
+		main.table.setValueAt(email, crow, 4);
+		setClear();
+
+		// 현재상태 정보를 등록이 가능하도록 값을 변경ㅇ한다.
+		crow = -1;
+	}// end setModify();//////////////////////////////
+
+	private void setRegister() {
+
+		// crow변수값이 -1이면 등록이란 버튼이 눌리지않고 메시지를 띄워준다.
+
+		if (crow >= 0) { // 이미 등록이 되어있는 레코드
+			setMessage("이미 등록된 레코드입니다.");
+			return;
+		}
+
+		String name = main.nameF.getText().trim();// trim 공백제거
+		String sex = main.manR.isSelected() ? "남" : "여"; // 메소드명이 is와 had면 결과값이 논리값이다.
+		// String tel1= main.telC.getSelectedItem().toString();//두가지 방법이다.
+		String tel1 = (String) main.telC.getSelectedItem();
+		String tel2 = main.tel1F.getText().trim();
+		String tel3 = main.tel2F.getText().trim();
+		String email = main.emailF.getText().trim();
+
+		/*
+		 * //1행에 고정으로 데이터가 입력되는형태. 반복문의형태로 다음행에 들어가도록 해줘야한다.
+		 * main.table.setValueAt(Integer.toString(1), 0, 0); main.table.setValueAt(name,
+		 * 0, 1); main.table.setValueAt(sex, 0, 2); main.table.setValueAt(tel1 + "-" +
+		 * tel2 + "-" + tel3, 0, 3); main.table.setValueAt(email, 0, 4);
+		 */
+
+		/*
+		 * for(int i=0; i<main.table.getRowCount(); i++) {
+		 * main.table.setValueAt(Integer.toString(1), i, 0); main.table.setValueAt(name,
+		 * i, 1); main.table.setValueAt(sex, i, 2); main.table.setValueAt(tel1 + "-" +
+		 * tel2 + "-" + tel3, i, 3); main.table.setValueAt(email, i, 4); }// end for
+		 */
+		// 모든 항목을 입력하지 않았을때 경고.
+		if (name.length() < 1 || tel2.length() < 1 || tel3.length() < 1 || email.length() < 1) {
+			setMessage("모든 항목을 입력하십시요");
+			return;
+		}
+
+		// 항목추가
+		for (int i = 0; i < main.table.getRowCount(); i++) {
+			if (main.table.getValueAt(i, 0) == null) {
+				main.table.setValueAt(Integer.toString(1 + i), i, 0);
+				main.table.setValueAt(name, i, 1);
+				main.table.setValueAt(sex, i, 2);
+				main.table.setValueAt(tel1 + "-" + tel2 + "-" + tel3, i, 3);
+				main.table.setValueAt(email, i, 4);
+				break;
+			}
+		} // end for
+		setClear();
+	}// end setRegister() ?////////////////////////////
+
+	// 입력된 항목 초기화 해줌.
+	public void setClear() {
+		main.nameF.setText("");
+		main.tel1F.setText("");
+		main.tel2F.setText("");
+		main.emailF.setText("");
+		main.telC.setSelectedIndex(0);
+		main.manR.setSelected(true);
+		// 커서위치
+		main.nameF.requestFocus();
+	}// end setClear()//////////////////////////////////
+
+	private void setInputRecord() {
+		int row = main.table.getSelectedRow();// 수정버튼을 눌렀을때
+
+		if (row < 0 || main.table.getValueAt(row, 0) == null) {
+			setMessage("데이터가 입력된 레코드를 선택하세요");
+			return;
+		}
+
+		crow = row;// 처리를한다.
+		// 더블클릭한 레코드의 행값을 얻는다.
+		main.nameF.setText(main.table.getValueAt(row, 1).toString());
+		String sex = main.table.getValueAt(row, 2).toString();
+		if (sex.equals("남"))
+			main.manR.setSelected(true);
+		else
+			main.womanR.setSelected(true);
+		String tel1 = main.table.getValueAt(row, 3).toString();
+		StringTokenizer st = new StringTokenizer(tel1, "-");
+		main.telC.setSelectedItem(st.nextToken());
+		main.tel1F.setText(st.nextToken());
+		main.tel2F.setText(st.nextToken());
+		main.emailF.setText(main.table.getValueAt(row, 4).toString());
+
+	}// end setInputRecord()/////////////////////////
+
+	@Override
+	public void mouseClicked(MouseEvent e) {// main.table.addMouseListener(this);를 작성하고온다.
+		Object obj = e.getSource();
+		if (obj == main.table && e.getClickCount() == 2) {
+			setInputRecord();
+
+		}
+
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}// end class

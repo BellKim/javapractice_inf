@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery034_slide.html</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				$('#btnup').click(function(){
+					$('img').slideUp('slow', function(){	//보틍은 'slow' 까지만나온다.
+						//alert('slideup!!');
+					});
+				});
+				
+				$('#btndown').click(function(){
+					$('img').slideDown('fast');
+				});
+				
+				$('#btntoggle').click(function(){
+					$('img').slideToggle('normal');
+				});
+				
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btnup">slideup</button>
+		<button id="btndown">slideDOwn</button>
+		<button id="btntoggle">slideToggle</button>
+		<br/>
+		<img src="images/aa.jpg"/>
+		
+		
+	</body>
+</html>
+
+
+
+

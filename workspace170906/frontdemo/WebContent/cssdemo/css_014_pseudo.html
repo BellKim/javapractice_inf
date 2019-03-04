@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css_013_pseudo</title>
+		<style type="text/css">
+			.wrap{
+				width:160px;
+				height:260px;
+				background-color:yellow;
+			}
+			
+			.aa{
+				width:100px;
+				height:100px;
+				background-color:red;
+				border-top:10px solid black;
+				border-bottom:10px solid black;
+				margin-bottom:10px;
+			}
+			
+			.bb{
+				width:100px;
+				height:100px;
+				background-color: blue;
+				border-top:10px solid gray;
+				border-bottom:10px solid gray;
+				margin-bottom:10px;
+			}
+			/*위아래 마진이 겹치면 둘중에 하나만 적용이된다. 그중에서 마진이 큰값이 적용이된다. */ 
+			span.sp1{
+				background-color: aqua;
+			}
+			span.sp2{
+				background-color: lime;
+				padding:10px;
+				border:1px solid black;
+			}
+			.inline{
+				background-color:brown;			
+				/*visivility:hidden;*/
+				overflow:hidden;
+				/*오버플러우 속성을 이용해서 서로 겹친 css를 안보이도록 숨겨주는 역할을 한다. */
+			}
+			
+			.cc{
+				background-color:green;
+			}
+			
+			#m1{
+				width:100px;
+				height:99px;
+				background-color: blue;
+				/*#m2의 margin값이 top에 적용되도록 하기 위해서 설정한다. 이 top값이 적용안되면 디자인이 적용되지 않음. 
+				*/
+				padding-top:1px;
+				
+			}
+			
+			#m2{
+				width:80px;
+				height:80px;
+				background-color: yellow;
+				margin:10px;
+			}
+			
+		</style>
+	</head>
+	<body>
+	<!--	
+		블럭요소일때 두 요소가 나란히 좌, 우 상하로 배열이 되어 있을때 서로 마진값이 겹치면 하나만 적용되고 다른 마진값은 무시된다.  
+	 -->
+		<div class="wrap">
+			<div class="aa">one</div>
+			<div class="bb">two</div>
+		</div>
+		
+		<div class="inline"> <!-- 줄을 바꾸거나 공백을 주게되면 한칸이 떨어지게 되어있다. -->
+			<span class="sp1">span1</span><span class="sp2">span2</span>
+
+		</div>
+		<p class="cc">test</p>
+			
+		<div id="m1">
+			<div id="m2">test</div>
+		</div>
+	
+	</body>
+</html>

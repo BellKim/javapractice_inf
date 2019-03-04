@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery044_plugin_dragged.html</title>
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+		<style type="text/css">
+			*{
+				margin : 0;
+				padding : 0;
+			}
+			div{
+				width: 150px;
+				height: 150px;
+				padding: 5px;
+			}
+			div:hover{
+				cursor:move;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript">
+		    $(document).ready(function(){
+		        $( "#draggable" ).draggable();	
+		    })
+		</script>
+	</head>
+	<body>
+		<div id="draggable" class="ui-widget-content">
+			<p>Drag me around</p>
+		</div>
+		
+		<!-- https://jqueryui.com/draggable/
+		 api documentation 을 들어가보면  설명이있다. 
+		 downloa 가서 버전 그냥 두고 최하단 다운로드 ㄱㄱ
+		 demo에 해당 프로그램에 필요한 파일들이 src 형태로 명시되어있을 것이다. 
+		 js, css 로 분류해서 폴더를 만들고 사용할 폴더내에 폴더를 추가를 해주고 다운받은 파일을 넣어준다.  
+		 
+		 상단에 link 테그로 css 파일을 연결해주고
+		 <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.js">
+		 
+		 js파일은 jquery를 참조하니까 script 쿼리 참조하는거 ㅅ아래에 추가해줘야한다. 
+		  <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		  
+		  그리고 데모에 명시된 function 형태를 참조해야한다. 
+		    
+			    $( "#draggable" ).draggable();
+			
+			
+			스크립트 테그에 기본형태를 작성하고 바로윗 문장을 넣는다.
+			 
+		 -->
+	</body>
+</html>

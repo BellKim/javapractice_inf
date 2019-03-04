@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>script_047_evenet</title>
+		<script type="text/javascript">
+			window.onload = function() {
+
+			};
+		</script>
+	</head>
+	<body>
+		<div id="red">
+			<div id="green">
+				<div id="blue"> &nbsp; </div>
+				
+			</div>
+			
+		</div>
+	
+	</body>
+</html>

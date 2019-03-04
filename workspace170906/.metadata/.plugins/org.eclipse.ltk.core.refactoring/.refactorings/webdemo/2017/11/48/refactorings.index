@@ -1,0 +1,19 @@
+1511764986447	Move compilation unit
+1511768357489	Rename resource 'makecookiejsp.jsp'
+1511768478238	Rename resource 'usecookie.jsp'
+1511768503846	Rename resource 'useCookie.jsp'
+1511770227118	Rename package 'BoardDTO'
+1511770476337	Rename resource 'board.sql'
+1511771038692	Copy package
+1511771055478	Delete element
+1511773100840	Move compilation unit
+1511773237146	Rename package 'Board.dao'
+1511773252598	Rename package 'Board.doc'
+1511773273647	Rename package 'Board.action'
+1511773280775	Rename package 'boarddemo.boardDAO'
+1511773285371	Rename package 'boarddemo.DAO'
+1511773294979	Rename package 'Board.boardDTO'
+1511782379367	Delete element
+1511782885118	Delete element
+1511946396807	Rename type 'UpdateFormActioin'
+1512025042147	Rename type 'SearchWord'
