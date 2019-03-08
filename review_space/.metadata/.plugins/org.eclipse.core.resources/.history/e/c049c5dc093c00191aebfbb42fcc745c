@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>session login</title>
+	</head>
+	<body>
+		<%
+			if(session.getAttribute("memberId_session")!=null)
+				response.sendRedirect("loginOK_session.jsp");
+		%>
+		<form action="loginCon_session" method="post">
+			ID: <input type="text" name="mID_session"></br>
+			PASSWORD : <input type="password" name="mPW_session"></br>
+			<input type="submit" value="login">
+
+		</form>
+		
+	</body>
+</html>

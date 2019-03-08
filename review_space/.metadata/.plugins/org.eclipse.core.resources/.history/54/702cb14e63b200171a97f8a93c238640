@@ -1,0 +1,30 @@
+package GUI_make_info;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class kitchen_main extends JPanel{
+	JButton popupbutton;
+	
+	
+	public kitchen_main(){
+		
+		popupbutton = new JButton("centerButton");
+		this.add(popupbutton, BorderLayout.CENTER);
+		
+		
+
+	
+		
+		
+
+	}//end kitchen_main()//////////////////////////
+
+}

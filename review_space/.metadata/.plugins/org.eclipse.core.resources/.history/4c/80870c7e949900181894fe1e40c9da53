@@ -1,0 +1,8 @@
+package java0807_basic;
+
+public class java001_basic {
+	public static void main(String[] args) {
+		System.out.println("hellow");
+	}
+
+}

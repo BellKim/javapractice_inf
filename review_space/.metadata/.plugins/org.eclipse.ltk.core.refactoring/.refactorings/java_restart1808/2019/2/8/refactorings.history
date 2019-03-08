@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;java0807_basic.java0821_basic&apos; to &apos;java003_dataType&apos;&#x0D;&#x0A;- Original project: &apos;java_restart1808&apos;&#x0D;&#x0A;- Original element: &apos;java0807_basic.java0821_basic&apos;&#x0D;&#x0A;- Renamed element: &apos;java0807_basic.java003_dataType&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;java0821_basic&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;java0807_basic{java0821_basic.java[java0821_basic" matchStrategy="1" name="java003_dataType" qualified="false" references="true" similarDeclarations="false" stamp="1550465037511" textual="false" version="1.0"/>
+</session>

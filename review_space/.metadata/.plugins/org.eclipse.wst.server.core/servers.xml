@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v8.5 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v8.5 Server at localhost" name="Tomcat v8.5 Server at localhost" runtime-id="Apache Tomcat v8.5 (2)" saveSeparateContextFiles="true" server-type="org.eclipse.jst.server.tomcat.85" server-type-id="org.eclipse.jst.server.tomcat.85" start-timeout="45" stop-timeout="15" testEnvironment="false" timestamp="16">
+    <list key="modules" value0="lec04Pro001::org.eclipse.jst.jee.server:lec04Pro001::jst.web::3.1" value1="servletMappingTest::org.eclipse.jst.jee.server:servletMappingTest::jst.web::3.1" value2="testPrj_servlet::org.eclipse.jst.jee.server:testPrj_servlet::jst.web::3.1" value3="testPrj_servlet_1::org.eclipse.jst.jee.server:testPrj_servlet_1::jst.web::3.1" value4="testPrj_servlet_2::org.eclipse.jst.jee.server:testPrj_servlet_2::jst.web::3.1" value5="testPrj_servlet_3_cookie_session::org.eclipse.jst.jee.server:testPrj_servlet_3_cookie_session::jst.web::3.1" value6="testPrj_servlet_5_lec18::org.eclipse.jst.jee.server:testPrj_servlet_5_lec18::jst.web::3.1" value7="testPrj_servlet_6_daodto::org.eclipse.jst.jee.server:testPrj_servlet_6_daodto::jst.web::3.1"/>
+  </server>
+</servers>

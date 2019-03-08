@@ -1,0 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>log on jsp </title>
+	</head>
+	<body>
+		<p>System.out.println("log on jsp ");</p>
+	<%
+		System.out.println("==========================");
+		System.out.println("log on jsp ");
+		Cookie[] cookies = request.getCookies();
+		for(Cookie c : cookies){
+			System.out.println("name = " + c.getName() );
+			System.out.println("value = " + c.getValue());
+		}
+		System.out.println("==========================");
+	%>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	</body>
+</html>

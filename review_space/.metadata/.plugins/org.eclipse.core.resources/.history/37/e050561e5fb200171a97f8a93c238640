@@ -1,0 +1,120 @@
+package GUI_make_info;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.WindowAdapter;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+public class kitchen_info extends JFrame implements ActionListener, MouseListener{
+	kitchen_main main;
+	kitchen_toolbar tool;
+	kitchen_menu menu;
+	
+	public kitchen_info(){
+		this.setTitle("??");
+		
+		
+		menu = new kitchen_menu();
+		setJMenuBar(menu);
+		main = new kitchen_main();// 객체생성후
+		tool = new kitchen_toolbar();	//최상단 바로아래 버튼
+		
+		
+		main.popupbutton.addActionListener(this);
+		
+		
+		
+		
+		
+	
+	
+	
+	
+		
+	
+	
+	this.setSize(520,550);
+	this.setVisible(true);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+/*	this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+	addWindowListener(new WindowAdapter() {
+		String title ="종료";
+		String message = "정말 종료?";
+		if(getConfirmMessage(title, message) == JOptionPane.YES_NO_OPTION){
+			System.exit(0);
+		}	
+		
+	});*/
+	
+	
+	}//end kitchen_info(///////////////////////////////////;
+
+	public static void main(String[] args) {
+		
+		new kitchen_info();
+		
+	}//end main();
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		if (obj == main.popupbutton)
+			setPopupButton();// [등록]
+		
+		
+	}
+	
+	private void setPopupButton() {
+		
+	}//end setPopupButton()///////////////////////////////
+	
+	public void setMessage(String msg) {
+		JLabel label = new JLabel(msg);
+		label.setFont(new Font("sanSerif", 0, 13));
+		label.setForeground(Color.blue);
+		JOptionPane.showMessageDialog(this, label);
+
+	}// end set Message();;;;//////////////////
+	
+	
+	
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}//end class ///

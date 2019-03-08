@@ -1,0 +1,13 @@
+package com.servlet.dao;
+
+public class BookDAO{
+	
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String id = "scott";
+	String pw = "tiger";
+	
+	
+	
+
+}

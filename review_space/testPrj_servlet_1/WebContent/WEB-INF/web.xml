@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>testPrj_servlet_1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+  	<param-name>imgDir</param-name>
+  	<param-value>/upload/img</param-value>
+  		<!-- 어떠한 서블릿에서도 이미지를 불러올수 있도록 하기 위해서 사용. -->
+  </context-param>
+  <context-param>
+  	<param-name>testServerIP</param-name>
+  	<param-value>127.0.0.1</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>realServerIP</param-name>
+  	<param-value>68.0.30.1</param-value>
+  </context-param>
+  
+    
+  <servlet>
+  	<servlet-name>servletEx</servlet-name>
+  	<jsp-file>/jspEx.jsp</jsp-file>
+  	
+  	<init-param>
+  		<param-name>adminID</param-name>
+  		<param-value>admin</param-value>
+  	</init-param>
+  	
+  	<init-param>
+  		<param-name>adminPW</param-name>
+  		<param-value>1234</param-value>
+  	</init-param>
+  	
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>servletEx</servlet-name>
+  	<url-pattern>/jspEx.jsp</url-pattern>
+  </servlet-mapping>
+  
+  
+</web-app>

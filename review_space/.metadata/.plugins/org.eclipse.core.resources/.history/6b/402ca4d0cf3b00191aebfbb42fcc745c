@@ -1,0 +1,64 @@
+package com.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/loginCon")
+public class loginCon extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		PrintWriter out = response.getWriter();//확인차원에서 출력.
+		
+		String mID=request.getParameter("mID");
+		String mPW=request.getParameter("mPW");//각 정보를 저장한다.
+		
+		System.out.println("mID = " +mID + "\n mPW = " + mPW );//시각화를 위한 출력.
+		
+		
+		//저장한 정보를 쿠키에 저장한다.
+		//사용자브라우저에 쿠키가 저장되어있는것을 요청한다. 
+		Cookie[] cookies = request.getCookies(); //배열에 쿠키를 담는다.
+		Cookie cookie = null;//쿠키초기화
+		
+		for(Cookie c : cookies) {
+			System.out.println("c.getName() = " +c.getName() + "\n c.getValue()= " + c.getValue() );
+			
+			if(c.getName().equals("memberId")) {
+				cookie = c;
+			}
+		}//여기까지 쿠키가 있을때 있는 쿠키를 출력시키는 과정. 
+		
+		
+		//쿠키가 없을때 쿠키를 생성해주는과정. 
+		if(cookie == null) {
+			System.out.println("cookie is null");
+			cookie = new Cookie("MemberId", mID);
+			System.out.println("log on jsp ");
+		}
+		
+		//응답을 해줘야 한다. 
+		//쿠키에대한 설정
+		response.addCookie(cookie);//사용자에대한 응답. 우에서 만든 쿠키를 전달해준다. 
+		cookie.setMaxAge(60*60);	//만료시간을 설정해준다. (1시간)
+		
+		System.out.println("cookies의 내용 : " + cookies);
+		
+		
+		//send redirect
+		response.sendRedirect("loginOK.jsp");		
+		
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

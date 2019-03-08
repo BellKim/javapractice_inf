@@ -1,0 +1,27 @@
+package com.servlet.dao;
+
+import java.util.ArrayList;
+
+public class BookDAO{
+	
+	String driver = "oracle.jdbc.driver.OracleDriver";
+	String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	String id = "scott";
+	String pw = "tiger";
+	
+	public BookDAO() {
+		try {
+			Class.forName(driver);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public ArrayList<Object> select(){
+		return null;
+	}
+	
+	
+	
+
+}

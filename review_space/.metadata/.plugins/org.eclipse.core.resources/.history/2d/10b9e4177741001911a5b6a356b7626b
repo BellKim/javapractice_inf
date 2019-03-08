@@ -1,0 +1,12 @@
+package com.servlet.dto;
+
+public class BookDTO {
+	int bookId;
+	String bookName;
+	String bookLoc;
+	
+	public BookDTO(int bookID, Stting bookNmae, String bookLoc) {
+		
+	}
+
+}

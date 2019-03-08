@@ -1,0 +1,26 @@
+package GUI_make_info;
+
+import javax.swing.JFrame;
+
+public class kitchen_info extends JFrame{
+	/*kitchen_main main;
+	kitchen_toolbar tool;
+	kitchen_menu menu;*/
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+		
+		new kitchen_info();
+		
+	}//end main();
+
+}//end kitcheninfo();

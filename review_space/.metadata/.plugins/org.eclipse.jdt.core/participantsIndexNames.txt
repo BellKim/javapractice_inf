@@ -1,0 +1,17 @@
+INDEX VERSION 1.131
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4148036110.index
+\test_project\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2486581385.index
+\testPrj_servlet\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2745686398.index
+\testPrj_servlet\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\719462554.index
+\testPrj_servlet_3_cookie\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\883509467.index
+\testPrj_servlet_3_cookie_session\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\274548889.index
+\lec18Pjt001\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4230082254.index
+\testPrj_servlet_1\src
+D:\STUDY\JAVAproject\start2018.08.03\Textbook\khAcademy\review_space\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1657922018.index
+\testPrj_servlet_5_lec18\src

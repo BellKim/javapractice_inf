@@ -1,0 +1,16 @@
+package java0807_basic;
+
+public class Java004_casting {
+
+	public static void main(String[] args) {
+		int x = 3;
+		double y = 4.5;
+		
+		//y=5; //이건 틀림. (이건 정수형이니까 더블형으로 해야함)
+		//y=(double)5; //더블로 형변환을 해줌.:묵시적 형변환: 작은 데이터 타입을 큰 데이터 타입으로 변환할때 발생한다.
+		y=5;
+		System.out.println(y);
+
+	}
+
+}

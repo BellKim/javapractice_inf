@@ -1,0 +1,14 @@
+package testprj12_exception;
+/*		이런게 있는지 알고만 넘어갈것. 
+ * 		NullPointerException			객체를 가리키지 않고 레퍼런스를이용.(잘못지정했을때)
+ * 		ArrayIndexOutOfBoundException 	존재하지 않는 배열을 가리킬때
+ * 		NumberFormatException			숫자데이터에 문자데이터를 넣었을때
+ * 
+ * 
+ * 
+ * */
+
+
+public class MainClass {
+
+}

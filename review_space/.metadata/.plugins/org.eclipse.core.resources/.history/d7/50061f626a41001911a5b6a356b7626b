@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="testPrj_servlet_6_daodto">
+        <property name="context-root" value="testPrj_servlet_6_daodto"/>
+    </wb-module>
+</project-modules>

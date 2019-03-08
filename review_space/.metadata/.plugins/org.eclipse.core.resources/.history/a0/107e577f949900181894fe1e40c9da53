@@ -1,0 +1,18 @@
+package java0807_basic;
+/* 컴파일 원본소스 - 기계어
+ * 명령어가 javac 라는 명령어가 있다. 
+ * 클레스 키워드에 있는걸 클레스 명이라고 한다. (java001_main)
+ * javac Java001_basic.java
+ * 
+ * class파일생성 : Java001_main.class
+ * 실행명령어 
+ * java java001_java_main.class
+ * */
+
+
+public class java001_basic {
+	public static void main(String[] args) {
+		System.out.println("hellow");
+	}
+
+}

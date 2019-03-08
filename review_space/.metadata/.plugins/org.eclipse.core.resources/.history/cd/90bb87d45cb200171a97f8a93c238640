@@ -1,0 +1,9 @@
+package GUI_make_info;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class kitchen_main extends JPanel{
+	JButton popupbutton;
+
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('button').click(process);
+			
+			function process(){
+				//alert("hello");
+				console.log(this);
+				
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<button id="btn"> commit </button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+package GUI_make_info;
+
+import java.awt.event.WindowAdapter;
+
+import javax.swing.JFrame;
+
+public class kitchen_info extends JFrame{
+	/*kitchen_main main;
+	kitchen_toolbar tool;
+	kitchen_menu menu;*/
+	
+	public kitchen_info(){
+		
+	
+	
+	
+	
+		
+	
+	
+	this.setSize(520,550);
+	this.setVisible(true);
+	this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+/*	this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+	addWindowListener(new WindowAdapter() {
+		String title ="종료";
+		String message = "정말 종료?";
+		if(getConfirmMessage(title, message) == JOptionPane.YES_NO_OPTION){
+			System.exit(0);
+		}	
+		
+	});*/
+	
+	
+	}//end kitchen_info();
+
+	public static void main(String[] args) {
+		
+		new kitchen_info();
+		
+	}//end main();
+
+
+}//end kitcheninfo();	

@@ -1,0 +1,36 @@
+package GUI_make_info;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class kitchen_main extends JPanel{
+	JButton popupbutton;
+	
+	public kitchen_main(){
+		popupbutton = new JButton("버튼입니다.");
+		
+	/*	Font font = new Font("sansSerif", 0, 12);
+		
+		popupbutton.setFont(Font);*/
+		
+	JPanel ButtonP = new JPanel();
+	
+	ButtonP.add(popupbutton);
+	
+	JPanel up = new JPanel(new BorderLayout(0, 5));
+	
+	up.add("South", ButtonP);
+	
+	setLayout(new BorderLayout());
+	
+	
+	
+		
+		
+		
+	}//end kitchen_main()//////////////////////////
+
+}

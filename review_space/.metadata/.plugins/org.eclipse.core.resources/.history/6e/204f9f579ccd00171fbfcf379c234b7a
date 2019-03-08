@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>this</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('button').click(process);
+			
+			function process(){
+				//alert("hello");
+				// <button id="btn"> commit </button>
+				console.log(this);
+				//[button#btn] (아코디언 메뉴처럼 내려감)
+				console.log($(this));
+				//배열이 있음. 1개 
+				console.log($(this).length);
+				
+				console.log($(this).length[0]);
+				//console.log($('this').length[0].nodeName);
+				console.log($(this)[0].nodeName);
+				
+				
+				
+				
+				
+			}
+			
+			
+			
+			
+		});
+	</script>
+</head>
+<body>
+	<button id="btn"> commit </button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+package GUI_make_info;
+
+import java.awt.BorderLayout;
+import java.awt.Font;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class kitchen_main extends JPanel{
+	JButton popupbutton;
+	
+	DefaultTableModel tableModel;
+	JTable table;
+	JScrollPane scroll;
+	
+	public kitchen_main(){
+		
+		Font font = new Font("sansSerif", 0, 12);
+		
+		popupbutton = new JButton("버튼입니다.");
+		
+		popupbutton.setFont(font);
+		
+		
+		
+		JPanel buttonP = new JPanel();// 자체가 FlowLayout임.
+		buttonP.add(popupbutton);
+		
+		
+		
+		JPanel up = new JPanel(new BorderLayout(0, 5));
+		up.add("South", buttonP);
+		
+	}//end kitchen_main()//////////////////////////
+
+}

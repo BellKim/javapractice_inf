@@ -1,0 +1,33 @@
+package GUI_make_info;
+
+import javax.swing.JFrame;
+
+public class kitchen_info extends JFrame{
+	/*kitchen_main main;
+	kitchen_toolbar tool;
+	kitchen_menu menu;*/
+	
+	public class kitchen_info{
+		
+	
+	
+	
+	
+		
+	
+	
+	this.setSize(520,550);
+	this.setVisible(true);
+	this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+	
+	
+	}
+
+	public static void main(String[] args) {
+		
+		new kitchen_info();
+		
+	}//end main();
+
+
+}//end kitcheninfo();	
