@@ -1,5 +1,5 @@
 #Tomcat publish data
-#Fri Mar 08 19:46:58 KST 2019
+#Sat Mar 09 12:06:19 KST 2019
 org.eclipse.jst.jee.server\:testPrj_servlet=D\:\\STUDY\\java_envir\\apache-tomcat-8.5.38_00\\wtpwebapps\\testPrj_servlet
 org.eclipse.jst.jee.server\:testPrj_servlet_5_lec18=D\:\\STUDY\\java_envir\\apache-tomcat-8.5.38_00\\wtpwebapps\\testPrj_servlet_5_lec18
 org.eclipse.jst.jee.server\:lec04Pro001=D\:\\STUDY\\java_envir\\apache-tomcat-8.5.38_00\\wtpwebapps\\lec04Pro001
